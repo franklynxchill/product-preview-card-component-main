@@ -1,0 +1,203 @@
+@font-face {
+  font-family: 'Fraunces 9pt Soft';
+  src: url('/assets/fonts/feaunces/Fraunces9ptSoft-Bold.woff2') format('woff2'),
+       url('/assets/fonts/feaunces/Fraunces9ptSoft-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/montserrat/Montserrat-Medium.woff2') format('woff2'),
+       url('/assets/fonts/montserrat/Montserrat-Medium.woff') format('woff');  
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/montserrat/Montserrat-Bold.woff2') format('woff2'),
+       url('/assets/fonts/montserrat/Montserrat-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /*Primary*/
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+
+  /*Neutral*/
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat';
+  background-color:  var(--Cream);
+  margin: 5rem 0;
+}
+
+h1 {
+  font-family: 'Fraunces 9pt Soft';
+  font-size: 2.5rem;
+  line-height: 1;
+  padding: 10px 0 1rem;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 4px;
+  color: var(--Dark-grayish-blue);
+}
+
+p {
+  line-height: 20px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--Dark-grayish-blue);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  justify-content: center;
+  align-content: center;
+}
+
+.image {
+  background-image: url('/assets/images/image-product-mobile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 26rem;
+  height: 18rem;
+  border-radius: 12px 12px 0 0;
+}
+
+.content {
+  width: 26rem;
+  background-color: var(--White);
+
+
+  border-radius: 0 0 12px 12px;
+  padding: 30px 1.5rem;
+}
+
+.tab-bar {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  margin: 1.2rem 0;
+  align-items: center;
+}
+
+.price {
+  color: var(--Dark-cyan);
+  font-size: 30px;
+  font-family: 'Fraunces 9pt Soft';
+  font-weight: 700;
+}
+
+.dicount-price {
+  text-decoration-line: line-through;
+  margin-left: 15px;
+}
+
+.call-to-action {
+  position: relative;
+}
+
+button {
+  background-color: var(--Dark-cyan);
+  color: var(--White);
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: background-color 0.15s;
+}
+
+button:hover {
+  background-color: hsl(157, 74%, 25%);
+}
+
+button:active {
+  background-color: hsl(157, 74%, 25%);
+}
+
+.icon  {
+  position: absolute;
+  width: 15px;
+  left: 110px;
+  top: 15px;
+}
+
+.attribution { 
+  text-align: center; 
+  margin: 40px 50px;
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+
+@media (width > 45em) {
+  body {
+    margin: unset;
+  }
+  .container {
+    flex-direction: row;
+    background-color: blue;
+  }
+  .image {
+    background-image: url('/assets/images/image-product-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 480px;
+    border-radius: 12px 0 0 12px;
+  }
+  .content {
+    border-radius: 0 12px 12px 0;
+    padding: 3rem 1.8rem 0;
+    width: 20rem;
+    height: 480px;
+  }
+  h1 {
+    padding: 1rem 0 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .icon {
+    top: 15px;
+    left: 60px;
+  }
+  .tab-bar {
+    justify-content: start;
+    margin: 1.2rem 0;
+  }
+}
+
